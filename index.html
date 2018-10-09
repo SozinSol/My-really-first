@@ -1,9 +1,59 @@
 <html>
     <head>
         <title>Yooo we doing it </title>
-    </head>
+ </head>
     <body>
         lets try this yeah
-        login form
-    </body>
+  </body>
+
+<tbody>
+<table>
+
+<list>
+  <l1>yes</l1> 
+  <l1>lets</l1> 
+  <l1>get</l1> 
+  <l1>this</l1>
+  <l1>bread</l1>   
+</list>
+</table>
+</tbody>
+<img></html>
+<h5><button>yes</button></h5>
+<h6><button>no</button></h6>
+
+var count = 0;
+var lives = 3;
+onEvent("start_button", "click", function() {
+  setScreen("game_screen");
+});
+onEvent("background", "click", function() {
+  lives = lives - 1;
+  setText("number_lives", lives);
+  if (lives === 0) {
+    setScreen("lose_screen");
+  }
+});
+onEvent("apple", "click", function() {
+  count = count + 1;
+  setText("total_score", count);
+  if (count == 3) {
+    setScreen("win_screen");
+  }
+});
+onEvent("apple", "click", function() {
+  setPosition("apple", randomNumber(50,280), randomNumber(50, 350));
+});
+onEvent("playAgain_button", "click", function() {
+  setScreen("welcome_screen");
+  count = 0;
+  lives = 3;
+});
+onEvent("tryAgain_button", "click", function() {
+  setScreen("welcome_screen");
+  count = 0;
+  lives = 3;
+});
+
+
 </html>
